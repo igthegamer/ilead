@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <div class="card">
+    <h1>Sign-Up Registration</h1>
+    <form (ngSubmit)="save()" #signupForm="ngForm" novalidate>
+
+      <mat-form-field class="full-width">
+        <mat-label>First Name</mat-label>
+        <input type="text" [(ngModel)]="firstName" name="firstName" required class="form-control" id="firstName" placeholder="Enter First Name">
+        <mat-error *ngIf="signupForm.controls['firstName'].invalid && signupForm.controls['firstName'].touched">First Name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Last Name</mat-label>
+        <input type="text" [(ngModel)]="lastName" name="lastName" required class="form-control" id="lastName" placeholder="Enter Last Name">
+        <mat-error *ngIf="signupForm.controls['lastName'].invalid && signupForm.controls['lastName'].touched">Last Name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" [(ngModel)]="email" name="email" required email class="form-control" id="email" placeholder="Enter Email">
+        <mat-error *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched">Invalid Email.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" [(ngModel)]="password" name="password" required class="form-control" id="password" placeholder="Enter Password">
+        <mat-error *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].touched">Password is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Address</mat-label>
+        <input type="text" [(ngModel)]="address" name="address" required class="form-control" id="address" placeholder="Enter Address">
+        <mat-error *ngIf="signupForm.controls['address'].invalid && signupForm.controls['address'].touched">Address is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Phone Number</mat-label>
+        <input type="text" [(ngModel)]="phone_number" name="phone_number" required class="form-control" id="phone_number" placeholder="Enter Phone Number">
+        <mat-error *ngIf="signupForm.controls['phone_number'].invalid && signupForm.controls['phone_number'].touched">Phone Number is required.</mat-error>
+      </mat-form-field>
+
+      <div>
+        <mat-radio-group [formControl]="role" name="role">
+          <mat-radio-button value="client">Client</mat-radio-button>
+          <br>
+          <mat-radio-button value="professional">Professional</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <button style="color: white; background-color: purple; border-color: purple;" type="submit" mat-raised-button color="primary" class="btn btn-primary mt-4">
+        <span class="verification-icon">✓</span> Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+

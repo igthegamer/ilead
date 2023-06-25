@@ -1,0 +1,68 @@
+/* Styling for the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styling for the spacer */
+.spacer {
+  flex: 1;
+}
+
+/* Styling for the container and card */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Additional styling for the form elements */
+.mat-form-field {
+  margin-bottom: 16px;
+}
+
+/* Styling for the submit button */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #8e24aa;
+}
+
+.verification-icon {
+  margin-right: 8px;
+}
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mat-radio-button {
+  margin-right: 12px;
+}
+
+.radio-label {
+  font-size: 14px;
+  font-weight: normal;
+}
